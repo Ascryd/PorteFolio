@@ -9,7 +9,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #ffffff;
-  background-color: rgb(16, 16, 63);
+  background-color: $color-primary
 }
 
 * {
