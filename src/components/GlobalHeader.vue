@@ -1,15 +1,16 @@
 <template>
-  <div class="header">
+  <header class="header">
       <img src="../assets/logo.png" alt="Logo de l'entreprise">
       <nav>
         <ul>
+          
           <li class="withBorder"><a href="#">À propos</a></li>
           <li class="withBorder"><a href="#">Compétences</a></li>
           <li class="withBorder"><a href="#">Projets</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -21,7 +22,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
 .header {
