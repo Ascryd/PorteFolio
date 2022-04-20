@@ -8,4 +8,10 @@
     @media screen and (max-width: 690px) {
         @content
     }
-}
+};
+
+@mixin about-wrap {
+    @media screen and (max-width: 690px) {
+        flex-wrap: wrap;
+    }
+};
