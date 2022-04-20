@@ -32,7 +32,6 @@ export default {
 
 .about {
     padding-top: 150px;
-    // background-color: rgb(141, 0, 0);
     display: flex;
     flex-direction: column;
     gap: 30px;

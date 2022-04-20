@@ -1,6 +1,10 @@
-<template>
+<template lang="fr">
+
+  
   <div class="home">
     <GlobalHeader />
+
+    
 
     <AboutSection />
   </div>
@@ -19,3 +23,9 @@ export default {
   }
 }
 </script>
+
+
+
+<style scoped lang="scss">
+
+</style>
