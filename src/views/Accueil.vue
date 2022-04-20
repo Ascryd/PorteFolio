@@ -4,7 +4,7 @@
   <div class="home">
     <GlobalHeader />
 
-    
+    <PresentSection />
 
     <AboutSection />
   </div>
@@ -14,12 +14,14 @@
 // @ is an alias to /src
 import GlobalHeader from '@/components/GlobalHeader.vue'
 import AboutSection from '@/components/AboutSection.vue'
+import PresentSection from '@/components/PresentSection.vue'
 
 export default {
   name: 'HomeView',
   components: {
     GlobalHeader,
-    AboutSection
+    AboutSection,
+    PresentSection
   }
 }
 </script>
