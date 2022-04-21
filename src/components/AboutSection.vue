@@ -53,7 +53,8 @@ export default {
 
         h2 {
             min-width: 155px;
-            font-size: 30px;
+            font-size: $title-size;
+            font-weight: bold;
         }
 
         .line {
@@ -78,10 +79,11 @@ export default {
             // background-color: rgb(160, 0, 0);
             display: flex;
             flex-direction: column;
+            text-align: left;
             gap: 25px;
 
             p {
-                font-size: 17px;
+                font-size: 18px;
                 color: rgb(216, 216, 216);
             }
         }
