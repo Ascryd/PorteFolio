@@ -26,6 +26,8 @@
 import MenuHeader from '@/components/MenuHeader.vue'
 
 export default {
+  // Option API
+
   name: 'GlobalHeader',
   components: {
     MenuHeader,
@@ -36,10 +38,6 @@ export default {
       menu: false
     }
   },
-
-  methods: {
-
-  }
 }
 </script>
 
