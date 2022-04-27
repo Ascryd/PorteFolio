@@ -1,17 +1,22 @@
 <template lang="fr">
 
-  
-  <div class="home">
-    <GlobalHeader />
+  <div class="body">
+    <ProjectModal />
 
-    <PresentSection />
+    <div class="home">
+      <GlobalHeader />
 
-    <AboutSection />
+      <PresentSection />
 
-    <SkillsSection />
+      <AboutSection />
 
-    <ProjectSection />
+      <SkillsSection />
+
+      <ProjectSection />
+    </div>
   </div>
+
+  
 </template>
 
 <script>
@@ -22,6 +27,7 @@ import PresentSection from '@/components/PresentSection.vue'
 import SkillsSection from '@/components/SkillsSection.vue'
 import ProjectSection from '@/components/ProjectSection.vue'
 
+
 export default {
   name: 'HomeView',
   components: {
@@ -29,7 +35,7 @@ export default {
     AboutSection,
     PresentSection,
     SkillsSection,
-    ProjectSection
+    ProjectSection,
   }
 }
 </script>

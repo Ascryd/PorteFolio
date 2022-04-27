@@ -13,7 +13,6 @@ export default {
 
 
     data() {
-        // console.log(this.$parent);
         return {
             index: 0
         }

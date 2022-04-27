@@ -1,6 +1,6 @@
 <template lang="fr">
     <div class="carousel">
-        <slot :currentSlide="currentSlide"></slot>
+        <slot name="projects" :currentSlide="currentSlide"></slot>
 
         <div class="navigate">
             <div class="toggle-page left">
@@ -68,16 +68,17 @@ export default {
     
 .navigate {
     position: absolute;
-    height: 100%;
+    top: 225px;
     width: 100%;
     padding: 0 16px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
 
     .toggle-page {
         display: flex;
         flex: 1;
+        // height: 50px;
     }
 
     .right {
@@ -101,7 +102,7 @@ export default {
 
 .pagination {
     position: absolute;
-    bottom: 24px;
+    top: 465px;
     width: 100%;
     display: flex;
     justify-content: center;

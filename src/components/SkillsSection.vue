@@ -104,12 +104,16 @@ export default {
                 width: 200px;
     
                 li {
-                    // background-color: rgba(255, 0, 0, 0.281);
                     height: 60px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     border: solid grey 1px;
+                    transition: all 0.3s ;
+
+                    &:hover {
+                        background-color: $color-secondary;
+                    }
                 }
             }
         }
