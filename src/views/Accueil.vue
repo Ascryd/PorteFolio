@@ -1,9 +1,11 @@
 <template lang="fr">
 
   <div class="body">
+
     <ProjectModal />
 
     <div class="home">
+
       <GlobalHeader />
 
       <PresentSection />
@@ -14,9 +16,9 @@
 
       <ProjectSection />
     </div>
+
   </div>
 
-  
 </template>
 
 <script>
@@ -26,6 +28,7 @@ import AboutSection from '@/components/AboutSection.vue'
 import PresentSection from '@/components/PresentSection.vue'
 import SkillsSection from '@/components/SkillsSection.vue'
 import ProjectSection from '@/components/ProjectSection.vue'
+import ProjectModal from '@/components/ProjectModal.vue'
 
 
 export default {
@@ -36,7 +39,8 @@ export default {
     PresentSection,
     SkillsSection,
     ProjectSection,
-  }
+    ProjectModal,
+  },
 }
 </script>
 

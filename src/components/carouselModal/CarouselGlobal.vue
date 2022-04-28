@@ -1,6 +1,6 @@
 <template lang="fr">
     <div class="carousel">
-        <slot name="projects" :currentSlide="currentSlide"></slot>
+        <slot :currentSlide="currentSlide"></slot>
 
         <div class="navigate">
             <div class="toggle-page left">
@@ -54,7 +54,7 @@ export default {
         }
 
         onMounted(() => {  // Ici on a le nombre de slides
-            getSlideCount.value = document.querySelectorAll(".slide").length
+            getSlideCount.value = document.querySelectorAll(".modalSlide").length
         })
 
         return {currentSlide, nextSlide, prevSlide, getSlideCount, goToSlide}
@@ -65,20 +65,19 @@ export default {
 
 
 <style scoped lang="scss">
-    
+
 .navigate {
     position: absolute;
-    top: 225px;
     width: 100%;
     padding: 0 16px;
     display: flex;
-    justify-content: center;
-    // align-items: center;
+    align-items: center;
+    height: 20%;
+    top: 40%;
 
     .toggle-page {
         display: flex;
         flex: 1;
-        // height: 50px;
     }
 
     .right {
@@ -92,8 +91,8 @@ export default {
         align-items: center;
         padding: 5px;
         border-radius: 50%;
-        width: 25px;
-        height: 25px;
+        width: 40px;
+        height: 40px;
         background-color: $color-secondary-transparent;
         color: black;
 
@@ -106,7 +105,7 @@ export default {
 
 .pagination {
     position: absolute;
-    top: 465px;
+    bottom: -30px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -115,8 +114,8 @@ export default {
 
     span {
         cursor: pointer;
-        width: 15px;
-        height: 15px;
+        width: 23px;
+        height: 23px;
         border-radius: 50%;
         background-color: white;
     }
