@@ -55,6 +55,7 @@ export default {
 
         const carouselSlides = [
             {
+                id: 1,
                 name: 'Reservia',
                 images: 'P2/desktop_top',
                 presentation: "Ce projet est le second de la formation Développeur Web chez OpenClassrooms.",
@@ -65,6 +66,7 @@ export default {
             },
 
             {
+                id: 2,
                 name: "OhMyFood",
                 images: 'P3/desktop_accueil',
                 presentation: "Ce projet est le troisième de la formation Développeur Web chez OpenClassrooms.",
@@ -75,6 +77,7 @@ export default {
             },
 
             {
+                id: 3,
                 name: "La chouette agence",
                 images: 'P4/desktop_after',
                 presentation: "Ce projet est le quatrième de la formation Développeur Web chez OpenClassrooms.",
@@ -86,6 +89,7 @@ export default {
             },
 
             {
+                id: 4,
                 name: "Kanap",
                 images: 'P5/desktop_list',
                 presentation: "Ce projet est le cinquième de la formation Développeur Web chez OpenClassrooms.",
@@ -96,6 +100,7 @@ export default {
             },
 
             {
+                id: 5,
                 name: "Piiquante",
                 images: 'P6/desktop_list',
                 presentation: "Ce projet est le sixième de la formation Développeur Web chez OpenClassrooms.",
@@ -105,6 +110,7 @@ export default {
             },
 
             {
+                id: 6,
                 name: "Groupomania",
                 images: 'P7/desktop_home',
                 presentation: "Ce projet est le septième de la formation Développeur Web chez OpenClassrooms, il s’agit du projet final.",
@@ -134,7 +140,6 @@ export default {
 <style scoped lang="scss">
     .projects {
         width: 100%;
-        padding-bottom: 200px; // ATTENTION //
 
         .title {
             display: flex;
@@ -159,7 +164,7 @@ export default {
         .carousel {
             margin: 35px auto 0 auto;
             width: 900px;
-            height: 600px;
+            height: 820px;
             position: relative;
             @include carousel-middle {
                 width: 100%;
@@ -212,7 +217,6 @@ export default {
                             background-color: rgba(0, 0, 0, 0.548);
                             padding: 8px;
                             color: white;       
-                            content: 'yooooooooooooooooo';                 
                         }                        
                     }
 

@@ -15,6 +15,8 @@
       <SkillsSection />
 
       <ProjectSection />
+
+      <ContactSection />
     </div>
 
   </div>
@@ -29,6 +31,7 @@ import PresentSection from '@/components/PresentSection.vue'
 import SkillsSection from '@/components/SkillsSection.vue'
 import ProjectSection from '@/components/ProjectSection.vue'
 import ProjectModal from '@/components/ProjectModal.vue'
+import ContactSection from '@/components/ContactSection.vue'
 
 
 export default {
@@ -40,6 +43,7 @@ export default {
     SkillsSection,
     ProjectSection,
     ProjectModal,
+    ContactSection
   },
 }
 </script>
@@ -48,4 +52,7 @@ export default {
 
 <style scoped lang="scss">
 
+.body {
+  padding-bottom: 150px;
+}
 </style>
