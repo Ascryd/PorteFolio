@@ -2,6 +2,7 @@
     <section class="about">
 
         <div class="title">
+            <div class="line"> </div>
             <h2>À propos</h2>
             <div class="line"> </div>
         </div>
@@ -21,7 +22,7 @@
             </div>
 
             <div class="photo">
-                <img src="../assets/logo.png" alt="Ma photo">
+                <img src="../assets/photo.jpg" alt="Ma photo">
             </div>
         </div>
     </section>
@@ -59,14 +60,16 @@ export default {
 
         .line {
             height: 2px;
-            width: 60%;
+            width: 50%;
             background-color: rgb(255, 255, 255);
         }
     }
 
     .content {
+        // width: 20px;
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 30px;
         margin: auto;
         padding: 0 30px;
@@ -74,9 +77,8 @@ export default {
         
 
         .informations {
-            min-width: 250px;
+            min-width: 200px;
             max-width: 750px;
-            // background-color: rgb(160, 0, 0);
             display: flex;
             flex-direction: column;
             text-align: left;
@@ -90,6 +92,12 @@ export default {
 
         .photo {
             margin: 0 10px 0 10px;
+            max-width: 290px;
+
+
+            img {
+                width: 100%;
+            }
         }
     }
 }

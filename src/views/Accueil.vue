@@ -2,7 +2,7 @@
 
   <div class="body">
 
-    <ProjectModal />
+    <ProjectModal v-if="isActive" />
 
     <div class="home">
 
@@ -33,6 +33,9 @@ import ProjectSection from '@/components/ProjectSection.vue'
 import ProjectModal from '@/components/ProjectModal.vue'
 import ContactSection from '@/components/ContactSection.vue'
 
+import { useStore } from 'vuex'
+import { computed } from 'vue'
+
 
 export default {
   name: 'HomeView',
@@ -45,6 +48,24 @@ export default {
     ProjectModal,
     ContactSection
   },
+
+  setup() {
+    const store = useStore()
+
+    let isActive = false
+
+    isActive = computed(() => store.getters.isActive)
+
+    console.log(isActive.value);
+
+    // let isActive = computed(() => {
+    //   console.log('je suis là');
+    //   console.log(store.getters.isActive);
+    //   return store.getters.isActive
+    // })
+    
+    return {isActive}
+  }
 }
 </script>
 

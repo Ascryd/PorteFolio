@@ -1,13 +1,11 @@
 <template lang="fr">
     <div class="contactSection">
 
-        <div class="title">
-            <div class="line"> </div>
-            <h2>Contact</h2>
-            <div class="line"> </div>
-        </div>
+        
 
         <div class="contact">
+
+            <h2 class="title">Contact</h2>
 
             <div class="text">
                     <p>Je suis actuellement à la recherche d’un poste ou d’une mission de développeur web Front-end, principalement en VueJs. Si mon profil vous intéresse ou si vous avez des questions, n'hésitez pas à me contacter sur Linkedin ou par mail.</p>
@@ -39,41 +37,30 @@ export default {
 <style scoped lang="scss">
 
 .contactSection {
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-
-    .title {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        // background-color: green;
-        gap: 20px;
-
-        h2 {
-            font-size: $title-size;
-            font-weight: bold;
-        }
-
-        .line {
-            height: 2px;
-            width: 40%;
-            background-color: rgb(255, 255, 255);
-        }
-    }
 
     .contact {
-        max-width: 450px;
+        max-width: 700px;
+        height: 550px;
         margin: auto;
         display: flex;
         flex-direction: column;
-        gap: 35px;
+        align-items: center;
+        justify-content: center;
+        gap: 70px;
+        border: solid white 2px;
+
+        .title {
+            font-size: $title-size;
+            font-weight: bold;
+            background-color: $color-primary;
+            // padding-bottom: 70px 
+        } 
 
         .text {
             display: flex;
             flex-direction: column;
-            gap: 25px;
-            // margin: auto;
+            // gap: 80px;
+            max-width: 450px;
 
             p {
                 font-size: 23px;
@@ -82,9 +69,11 @@ export default {
 
         .liens {
             display: flex;
-            gap: 20px;
+            // gap: 80px;
             align-items: center;
             justify-content: space-around;
+            width: 100%;
+            max-width: 450px;
 
             a {
                 color: $color-secondary;

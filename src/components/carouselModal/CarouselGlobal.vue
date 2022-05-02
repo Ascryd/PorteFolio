@@ -15,12 +15,18 @@
             <span @click="goToSlide(index)" v-for="(slide, index) in getSlideCount" :key="index" :class="{active : index + 1 === currentSlide}">
             </span>
         </div>
+
+        <div class="btn-close">
+            <button @click="exitModal">Revenir au site</button>
+        </div>
     </div>
 </template>
 
 
 <script>
 import {ref, onMounted} from "vue"
+
+import { useStore } from 'vuex'
 
 export default {
     name: "CarouselGlobal",
@@ -57,7 +63,13 @@ export default {
             getSlideCount.value = document.querySelectorAll(".modalSlide").length
         })
 
-        return {currentSlide, nextSlide, prevSlide, getSlideCount, goToSlide}
+
+        const store = useStore()
+        const exitModal = () => {
+            store.dispatch('toggleModal')
+        }
+
+        return {currentSlide, nextSlide, prevSlide, getSlideCount, goToSlide, exitModal}
     }
 
 }
@@ -69,7 +81,6 @@ export default {
 .navigate {
     position: absolute;
     width: 100%;
-    padding: 0 16px;
     display: flex;
     align-items: center;
     height: 20%;
@@ -103,14 +114,32 @@ export default {
     }
 }
 
+.btn-close {
+    position: absolute;
+    top: -38px;
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+
+    button {
+        min-width: 150px; 
+        padding: 5px 15px;
+        background-color: $color-secondary;
+        border: none;
+        border-radius: 50px;
+        font-size: 15px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+}
+
 .pagination {
     position: absolute;
-    bottom: -30px;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 16px;
+    bottom: -36px;
 
     span {
         cursor: pointer;

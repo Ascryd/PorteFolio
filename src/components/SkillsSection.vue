@@ -65,6 +65,7 @@ export default {
         width: 85%;
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 20px;
         margin: auto;
 
@@ -75,7 +76,7 @@ export default {
 
         .line {
             height: 2px;
-            width: 100%;
+            width: 35%;
             background-color: rgb(255, 255, 255);
         }
     }
