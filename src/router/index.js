@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Accueil from '../views/Accueil.vue'
 
+
 const routes = [
   {
     path: '/',

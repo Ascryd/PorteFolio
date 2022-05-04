@@ -1,10 +1,10 @@
 <template lang="fr">
     <div class="menu">
         <ul>
-        <li class="withBorder"><a href="#">À propos</a></li>
-        <li class="withBorder"><a href="#">Compétences</a></li>
-        <li class="withBorder"><a href="#">Projets</a></li>
-        <li><a href="#">Contact</a></li>
+            <li @click="$emit('toggleMenu')" @click.prevent="$emit('scrollToElement', 'about')"><a href="#">À propos</a></li>
+            <li @click="$emit('toggleMenu')" @click.prevent="$emit('scrollToElement', 'skills')"><a href="#">Compétences</a></li>
+            <li @click="$emit('toggleMenu')" @click.prevent="$emit('scrollToElement', 'projects')"><a href="#">Projets</a></li>
+            <li @click="$emit('toggleMenu')" @click.prevent="$emit('scrollToElement', 'contact')"><a href="#contact">Contact</a></li>
         </ul>
     </div>
 </template>
@@ -15,6 +15,14 @@
 
 export default {
     name: "MenuHeader",
+
+    methods: {
+        emitScrollToEvent (id) {
+            this.$emit('scroll-to-element', id)
+            console.log("test");
+            console.log(id);
+        }
+    },
 }
 
 </script>
@@ -49,6 +57,7 @@ export default {
              a {
                  font-size: 1.2rem;
                  color: white;
+                 transition: color 0.3s;
 
                  &:hover {
                      color: $color-secondary;

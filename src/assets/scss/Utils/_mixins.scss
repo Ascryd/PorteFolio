@@ -21,3 +21,22 @@
         @content
     }
 };
+
+@mixin title-format {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: 20px;
+
+    h2 {
+        font-size: $title-size;
+        font-weight: bold;
+    }
+
+    .line {
+        height: 2px;
+        background-color: rgb(255, 255, 255);
+    }
+};

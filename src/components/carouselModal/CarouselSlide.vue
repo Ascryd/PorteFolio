@@ -21,20 +21,21 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style scoped lang="scss">
     
-.slide-enter-active,
-.slide-leave-active {
-    transition: opacity 0.6s ease-in-out;
+.modalSlide-enter-active,
+.modalSlide-leave-active {
+    transition: opacity 0.4s ease-in-out;
 }
 
-.slide-enter-from,
-.slide-leave-to {
+.modalSlide-enter-from,
+.modalSlide-leave-to {
     opacity: 0;
+
 }
 
-.slide-enter-to,
-.slide-leave-from {
+.modalSlide-enter-to,
+.modalSlide-leave-from {
     opacity: 1;
 }
 

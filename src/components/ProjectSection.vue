@@ -1,5 +1,5 @@
 <template lang="fr">
-    <div class="projects">
+    <div id="projects" class="projects">
         
         <div class="title">
            <div class="line"> </div>
@@ -145,23 +145,11 @@ export default {
         width: 100%;
 
         .title {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
+            @include title-format;
             width: 85%;
-            margin: auto;
-            // justify-content: right;
-
-            h2 {
-                font-size: $title-size;
-                font-weight: bold;
-            }
 
             .line {
-                height: 2px;
                 width: 30%;
-                background-color: rgb(255, 255, 255);
             }
         }
 
@@ -175,7 +163,6 @@ export default {
             }
             
             .slide-info {
-                // border-top: solid $color-secondary-transparent 2px;
                 position: absolute;
                 width: 900px;
                 top: 0;

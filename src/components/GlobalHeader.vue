@@ -1,15 +1,15 @@
 <template>
   <transition name="slideMenu">
-    <MenuHeader v-show="menu" />
+    <MenuHeader @toggle-menu="toggleMenu" @scroll-to-element="scrollToElement" v-show="menu" />
   </transition>
   <header class="header">
       <img src="../assets/logo.png" alt="Logo de l'entreprise">
       <nav>
         <ul>
-          <li class="withBorder"><a href="#">À propos</a></li>
-          <li class="withBorder"><a href="#">Compétences</a></li>
-          <li class="withBorder"><a href="#">Projets</a></li>
-          <li><a href="#">Contact</a></li>
+          <li @click.prevent="scrollToElement('about')" class="withBorder"><a href="#">À propos</a></li>
+          <li @click.prevent="scrollToElement('skills')" class="withBorder"><a href="#">Compétences</a></li>
+          <li @click.prevent="scrollToElement('projects')" class="withBorder"><a href="#/contact">Projets</a></li>
+          <li @click.prevent="scrollToElement('contact')"><a href="#">Contact</a></li>
         </ul>
         
         <div class="menuToggle">
@@ -38,6 +38,21 @@ export default {
       menu: false
     }
   },
+
+  methods: {
+    scrollToElement (id) {
+      let elementToScroll = document.getElementById(id)
+      console.log(elementToScroll);
+      console.log(id);
+      elementToScroll.scrollIntoView({ behavior: 'smooth' })
+    },
+
+    toggleMenu () {
+      this.menu = !this.menu
+      document.querySelector(".cross").checked = false
+    }
+  },
+
 }
 </script>
 

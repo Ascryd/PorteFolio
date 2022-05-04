@@ -21,7 +21,7 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style scoped lang="scss">
     
 .slide-enter-active,
 .slide-leave-active {

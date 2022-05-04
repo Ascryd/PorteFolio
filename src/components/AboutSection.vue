@@ -1,5 +1,5 @@
 <template lang="fr">
-    <section class="about">
+    <section id="about" class="about">
 
         <div class="title">
             <div class="line"> </div>
@@ -46,22 +46,15 @@ export default {
     gap: 30px;
 
     .title {
+        @include title-format;
         width: 85%;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        gap: 20px;
 
         h2 {
             min-width: 155px;
-            font-size: $title-size;
-            font-weight: bold;
         }
 
         .line {
-            height: 2px;
             width: 50%;
-            background-color: rgb(255, 255, 255);
         }
     }
 

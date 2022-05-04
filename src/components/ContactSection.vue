@@ -1,5 +1,5 @@
 <template lang="fr">
-    <div class="contactSection">
+    <div id="contact" class="contactSection">
 
         
 

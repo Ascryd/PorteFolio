@@ -2,7 +2,9 @@
 
   <div class="body">
 
-    <ProjectModal v-if="isActive" />
+    <Transition name="toggleCarousel">
+      <ProjectModal v-if="isActive" />
+    </Transition>
 
     <div class="home">
 
@@ -72,6 +74,22 @@ export default {
 
 
 <style scoped lang="scss">
+
+.toggleCarousel-enter-active,
+.toggleCarousel-leave-active {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.toggleCarousel-enter-from,
+.toggleCarousel-leave-to {
+    opacity: 0;
+
+}
+
+.toggleCarousel-enter-to,
+.toggleCarousel-leave-from {
+    opacity: 1;
+}
 
 .body {
   padding-bottom: 150px;

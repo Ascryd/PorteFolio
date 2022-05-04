@@ -1,5 +1,5 @@
 <template lang="fr">
-    <div class="skills">
+    <div id="skills" class="skills">
 
         <div class="title">
             <div class="line"> </div>
@@ -62,22 +62,11 @@ export default {
     margin-top: 200px;
 
     .title {
+        @include title-format;
         width: 85%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        margin: auto;
-
-        h2 {
-            font-size: $title-size;
-            font-weight: bold;
-        }
 
         .line {
-            height: 2px;
             width: 35%;
-            background-color: rgb(255, 255, 255);
         }
     }
 
