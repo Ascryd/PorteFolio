@@ -6,9 +6,10 @@
       <ProjectModal v-if="isActive" />
     </Transition>
 
-    <div class="home">
-
-      <GlobalHeader />
+    <GlobalHeader />
+    
+    
+    <div class="content">
 
       <PresentSection />
 
@@ -93,5 +94,11 @@ export default {
 
 .body {
   padding-bottom: 150px;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(60px, 35vw, 350px);
+  }
 }
 </style>

@@ -59,7 +59,6 @@ export default {
     
 .skills {
     width: 100%;
-    margin-top: 200px;
 
     .title {
         @include title-format;
@@ -72,7 +71,6 @@ export default {
 
     .content {
         margin-top: 20px;
-        padding-bottom: 200px;  // ATTENTION //
         display: flex;
         gap: 35px;
         justify-content: center;
@@ -83,7 +81,7 @@ export default {
             
             h3 {
                 margin-bottom: 10px;
-                font-size: 18px;
+                font-size: clamp(18px, 3vw, 22px);;
             }
             
             ul {
@@ -91,7 +89,7 @@ export default {
                 flex-direction: column;
                 gap: 5px;
                 margin: auto;
-                width: 200px;
+                width: clamp(200px, 15vw, 230px);;
     
                 li {
                     height: 60px;

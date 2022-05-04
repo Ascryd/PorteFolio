@@ -47,7 +47,11 @@ export default {
         align-items: center;
         justify-content: center;
         gap: 70px;
-        border: solid white 2px;
+        border: solid rgba(255, 255, 255, 0.514) 2px;
+
+        &:hover {
+            border: solid rgb(255, 255, 255) 2px;
+        }
 
         .title {
             font-size: $title-size;
@@ -59,11 +63,10 @@ export default {
         .text {
             display: flex;
             flex-direction: column;
-            // gap: 80px;
             max-width: 450px;
 
             p {
-                font-size: 23px;
+                font-size: clamp(20px, 3vw, 23px);;
             }
         }
 

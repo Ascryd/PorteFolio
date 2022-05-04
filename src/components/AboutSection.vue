@@ -40,7 +40,7 @@ export default {
 <style scoped lang="scss">
 
 .about {
-    padding-top: 200px;
+    // padding-top: 200px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -78,7 +78,7 @@ export default {
             gap: 25px;
 
             p {
-                font-size: 18px;
+                font-size: clamp(18px, 3vw, 22px);
                 color: rgb(216, 216, 216);
             }
         }

@@ -12,23 +12,27 @@
                 <div v-show="currentSlide === index + 1" class='slide-info'>
                     <img :src="require(`../assets/projects_pics/${slide.images[0]}.png`)" alt="Illustration du projet">
 
-                    <div @click="openGallery(slide.images)" class="gallery">
-                        <p>Plus d'images</p>  
+                    <div class="links">
+                        <p @click="openGallery(slide.images)">Plus d'images</p>  
                         <a :href="slide.github"><font-awesome-icon :icon="['fab', 'github']" class="icon"/></a>
                         <a v-if="slide.link" :href="slide.link"><font-awesome-icon icon="link" class="icon"/></a>
                     </div>
-
-                    <ul class="langages">
-                        <li v-for="langage in slide.langages">{{ langage }}</li>
-                    </ul>
+                    
 
                     <div class="description">
-                        <h4>{{ slide.name }}</h4>
-                        <div class="text">
-                            <p>{{ slide.presentation}}</p>
-                            <p>{{ slide.descriptionPart1 }}</p>
-                            <p v-if="slide.descriptionPart2">{{ slide.descriptionPart2 }}</p>
+                        <ul class="langages">
+                            <li v-for="langage in slide.langages">{{ langage }}</li>
+                        </ul>
+
+                        <div class="details">
+                            <h4>{{ slide.name }}</h4>
+                            <div class="text">
+                                <p>{{ slide.presentation}}</p>
+                                <p>{{ slide.descriptionPart1 }}</p>
+                                <p v-if="slide.descriptionPart2">{{ slide.descriptionPart2 }}</p>
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
             </CarouselSlide>
@@ -156,7 +160,9 @@ export default {
         .carousel {
             margin: 35px auto 0 auto;
             width: 900px;
-            height: 820px;
+            min-height: 670px;
+            height: calc(1150px - 30vw);
+            // 820
             position: relative;
             @include carousel-middle {
                 width: 100%;
@@ -164,7 +170,7 @@ export default {
             
             .slide-info {
                 position: absolute;
-                width: 900px;
+                width: 100%;
                 top: 0;
                 left: 0;
                 height: 450px;
@@ -179,7 +185,7 @@ export default {
                     object-fit: contain;
                 }
 
-                .gallery {
+                .links {
                     position: relative;
                     bottom: 37px;
                     display: flex;
@@ -212,58 +218,77 @@ export default {
                     }
 
                 }
-
-                .langages {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 20px;
-                    margin-top: 50px;
-                    transition: margin 0.5s;
-                    @include carousel-middle {
-                        margin: 50px 10px 0 10px;
-                    }
-
-                    li {
-                         background-color: $color-secondary;
-                         color: black;
-                         border-radius: 20px;
-                         padding: 0px 30px 0px 15px;
-                         position: relative;
-                         height: 23px;
-                         display: flex;
-                         align-items: center;
-
-                         &::after {
-                             content: "";
-                             background-color: $color-primary;
-                             width: 5px;
-                             height: 5px;
-                             border-radius: 50%;
-                             position: absolute;
-                             right: 12px;
-                             align-items: center;
-                         }
-                    }
-                }
-
                 .description {
-                    margin-top: 35px;
                     display: flex;
                     flex-direction: column;
-                    gap: 26px;
+                    gap: 40px;
 
-                    h4 {
-                        font-size: 24px;
-                        font-weight: 600;
-                        color: rgb(255, 255, 255);
+                    .langages {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: 20px;
+                        margin-top: 50px;
+                        transition: margin 0.5s;
+    
+                        li {
+                             background-color: $color-secondary;
+                             color: black;
+                             border-radius: 20px;
+                             padding: 0px 30px 0px 15px;
+                             position: relative;
+                             height: 23px;
+                             display: flex;
+                             align-items: center;
+    
+                             &::after {
+                                 content: "";
+                                 background-color: $color-primary;
+                                 width: 5px;
+                                 height: 5px;
+                                 border-radius: 50%;
+                                 position: absolute;
+                                 right: 12px;
+                                 align-items: center;
+                             }
+                        }
                     }
-
-                    .text {
+    
+                    .details {
+                        margin: 0 5px 0 5px;
+                        padding: 0 20px;
+                        height: auto;
                         display: flex;
                         flex-direction: column;
-                        gap: 11px;
+                        justify-content: center;
+                        gap: 26px;
+                        border-right: $color-secondary-transparent 2px solid;
+                        border-left: $color-secondary-transparent 2px solid;
+                        transition: all 0.4s;
+                        &:hover {
+                            border-right: $color-secondary 2px solid;
+                            border-left: $color-secondary 2px solid;
+                        }
+    
+                        h4 {
+                            font-size: clamp(25px, 3vw, 28px);;
+                            font-weight: 600;
+                            color: rgb(255, 255, 255);
+                        }
+    
+                        .text {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 11px;
+
+                            p {
+                                font-size: clamp(17px, 2vw, 19px);;
+                                
+                            }
+                        }
                     }
                 }
+
             }
         }
     }
