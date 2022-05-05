@@ -100,7 +100,7 @@ export default {
                     transition: all 0.3s ;
 
                     &:hover {
-                        background-color: $color-secondary;
+                        background: $color-secondary-gradient;
                     }
                 }
             }

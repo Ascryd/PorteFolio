@@ -3,7 +3,9 @@
     <MenuHeader @toggle-menu="toggleMenu" @scroll-to-element="scrollToElement" v-show="menu" />
   </transition>
   <header class="header">
-      <img src="../assets/logo.png" alt="Logo de l'entreprise">
+      <!-- <div class="logo"> -->
+        <img src="../assets/Full_White_Blue.svg" alt="Logo de l'entreprise">
+      <!-- </div> -->
       <nav>
         <ul>
           <li @click.prevent="scrollToElement('about')" class="withBorder"><a href="#">À propos</a></li>
@@ -68,13 +70,18 @@ export default {
 
 .header {
   display: flex;
-  justify-content: space-between;
-  padding: 20px 50px 20px 30px;
+  justify-content: flex-end;
+  padding: 40px 50px 20px 30px;
   align-items: center;
+  // margin-top: 25px;
   
-
   img {
-    width: 60px;
+    width: 160px;
+    position: absolute;
+    left: 40px;
+    top: -30px;
+    // top: -100px;
+    // height: 25px;
   }
 
   nav {

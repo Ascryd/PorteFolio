@@ -31,7 +31,7 @@ export default {
 <style lang="scss">
 
 .menu {
-    background-color: rgba(255, 255, 255, 0.144);
+    background-color: rgba(63, 63, 63, 0.849);
     position: absolute;
     right: 0;
     width: 100%;

@@ -1,6 +1,34 @@
 $color-primary: rgb(27, 27, 27);
 
-$color-secondary: rgb(255, 136, 0);
-$color-secondary-transparent: rgba(255, 136, 0, 0.404);
+// ------------------- orange
+// $color-secondary: rgb(255, 136, 0);
+// $color-secondary-gradient: rgb(255, 136, 0);
+
+
+//----------------- green
+// $color-secondary: rgba(110,136,82,1);
+// $color-secondary-gradient: linear-gradient(90deg, rgba(165,194,136,1) 0%, rgba(110,136,82,1) 40%, rgba(91,114,67,1) 100%);
+// $color-secondary-transparent: rgba(110, 136, 82, 0.589);
+// $color-secondary: rgba(165,194,136,1);
+// $color-secondary-darken: rgba(91,114,67,1);
+
+
+//--------------- red
+// $color-secondary-gradient: linear-gradient(90deg, rgba(182,64,73,1) 0%, rgba(249,147,145,1) 100%);
+// $color-secondary: #dd5b61;
+// $color-secondary-transparent: #dd5b62a8;
+
+
+// --------------- Purple
+// $color-secondary-gradient: linear-gradient(90deg, rgba(133,80,248,1) 0%, rgba(176,137,252,1) 100%);
+// $color-secondary: rgb(133,80,248);
+// $color-secondary-transparent: rgba(133, 80, 248, 0.644);
+
+// --------------- blue
+$color-secondary-gradient: linear-gradient(90deg, rgba(3,134,241,1) 0%, rgba(102,191,247,1) 100%);
+$color-secondary: rgb(3,134,241);
+$color-secondary-transparent: rgba(3, 134, 241, 0.486);
+
+
 
 $title-size: clamp(30px, 3vw, 35px);;

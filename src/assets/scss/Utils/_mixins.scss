@@ -1,11 +1,11 @@
 @mixin nav-responsive-large {
-    @media screen and (min-width: 690px) {
+    @media screen and (min-width: 750px) {
         @content
     }
 };
 
 @mixin nav-responsive-small {
-    @media screen and (max-width: 690px) {
+    @media screen and (max-width: 749px) {
         @content
     }
 };
