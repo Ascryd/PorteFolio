@@ -12,8 +12,7 @@
         </div>
 
         <div class="pagination">
-            <span @click="goToSlide(index)" v-for="(slide, index) in getSlideCount" :key="index" :class="{active : index + 1 === currentSlide}">
-            </span>
+            <span @click="goToSlide(index)" v-for="(slide, index) in getSlideCount" :key="index" :class="{active : index + 1 === currentSlide}"></span>
         </div>
     </div>
 </template>
@@ -73,12 +72,10 @@ export default {
     padding: 0 16px;
     display: flex;
     justify-content: center;
-    // align-items: center;
 
     .toggle-page {
         display: flex;
         flex: 1;
-        // height: 50px;
     }
 
     .right {
@@ -100,7 +97,6 @@ export default {
         &:hover {
             background-color: $color-secondary;
         }
-        
     }
 }
 
@@ -125,4 +121,5 @@ export default {
         background-color: $color-secondary;
     }
 }
+
 </style>

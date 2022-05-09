@@ -25,7 +25,6 @@
 
 <script>
 import {ref, onMounted} from "vue"
-
 import { useStore } from 'vuex'
 
 export default {
@@ -34,7 +33,6 @@ export default {
     setup() {
         const currentSlide = ref(1)
         const getSlideCount = ref(null)  // Null car au moment de l'initialisation de la variable, on a pas encore le nombre de slides
-
 
         // slide suivant
         const nextSlide = () => {
@@ -71,7 +69,6 @@ export default {
 
         return {currentSlide, nextSlide, prevSlide, getSlideCount, goToSlide, exitModal}
     }
-
 }
 </script>
 
@@ -116,7 +113,7 @@ export default {
 
 .btn-close {
     position: absolute;
-    top: -38px;
+    top: -30px;
     display: flex;
     justify-content: center; 
     width: 100%;
@@ -139,7 +136,7 @@ export default {
     display: flex;
     justify-content: center;
     gap: 16px;
-    bottom: -36px;
+    bottom: -29px;
 
     span {
         cursor: pointer;

@@ -3,9 +3,7 @@
     <MenuHeader @toggle-menu="toggleMenu" @scroll-to-element="scrollToElement" v-show="menu" />
   </transition>
   <header class="header">
-      <!-- <div class="logo"> -->
-        <img src="../assets/Full_White_Blue.svg" alt="Logo de l'entreprise">
-      <!-- </div> -->
+      <img src="../assets/Full_White_Blue.svg" alt="Logo de l'entreprise">
       <nav>
         <ul>
           <li @click.prevent="scrollToElement('about')" class="withBorder"><a href="#">À propos</a></li>
@@ -54,9 +52,9 @@ export default {
       document.querySelector(".cross").checked = false
     }
   },
-
 }
 </script>
+
 
 <style scoped lang="scss">
 
@@ -73,15 +71,12 @@ export default {
   justify-content: flex-end;
   padding: 40px 50px 20px 30px;
   align-items: center;
-  // margin-top: 25px;
   
   img {
     width: 160px;
     position: absolute;
     left: 40px;
     top: -30px;
-    // top: -100px;
-    // height: 25px;
   }
 
   nav {
@@ -151,8 +146,6 @@ export default {
         &:checked ~ span:nth-child(4) {
           transform: rotate(-45deg) translate(0, -1px);
         }
-
-
       }
 
       span {
@@ -167,8 +160,7 @@ export default {
         border-radius: 3px;
         z-index: 1;
         transform-origin: 5px 0px;
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                    opacity 0.55s ease;
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
 
         &:nth-child(4) {
           transform-origin: 0% 100%;
@@ -177,4 +169,5 @@ export default {
     }
   }
 }
+
 </style>

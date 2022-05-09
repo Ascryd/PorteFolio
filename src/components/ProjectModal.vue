@@ -34,7 +34,6 @@ export default {
         
         let carouselSlides = reactive['leopard', 'hérisson_starbucks']
 
-        // console.log(store.getters.galleryList);
         carouselSlides = computed(() => store.getters.galleryList)
 
         console.log(carouselSlides);
@@ -52,50 +51,43 @@ export default {
 
 <style lang="scss">
 
-    .modal {  // Chnager un peu le style
-        // display: none;
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.74);
         position: fixed;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-         display: flex;
-        align-items: center;
-        justify-content: center;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
 
-        .overlay {
-            background-color: rgba(0, 0, 0, 0.74);
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
+    .carousel {
+        position: fixed;
+        width: 90%;
+        height: 90%;
+        top: 5%;
+        display: flex;            
 
-        }
-
-        .carousel {
-            position: fixed;
-            width: 90%;
-            height: 90%;
-            // top: 5%;
-            // right: 0;
-            // left: 0;
-            top: 5%;
-            // bottom: 0;
-            display: flex;
-
+        .slide-info {
+            position: absolute;
+            width: 100%;
+            height: 100%;
             
-
-            .slide-info {
-                position: absolute;
+            img {
                 width: 100%;
                 height: 100%;
-                
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                }
+                object-fit: contain;
             }
         }
     }
+}
+
 </style>

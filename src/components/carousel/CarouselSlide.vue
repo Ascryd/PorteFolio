@@ -11,7 +11,6 @@
 export default {
     name: "CarouselSlide",
 
-
     data() {
         return {
             index: 0

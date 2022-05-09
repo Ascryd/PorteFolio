@@ -12,7 +12,6 @@ export default createStore({
     },
 
     galleryList (state) {
-      // console.log(state.galleryList);
       return state.galleryList
     }
   },
@@ -21,9 +20,6 @@ export default createStore({
     setModal (state, images) {
       state.isActive = !state.isActive
       state.galleryList = images
-      // console.log(state.isActive);
-      console.log(state.galleryList);
-      // console.log(images[0]);
     }
   },
 

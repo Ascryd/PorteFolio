@@ -1,15 +1,11 @@
 <template lang="fr">
     <div id="contact" class="contactSection">
-
-        
-
         <div class="contact">
 
             <h2 class="title">Contact</h2>
 
             <div class="text">
                     <p>Je suis actuellement à la recherche d’un poste ou d’une mission de développeur web Front-end, principalement en VueJs. Si mon profil vous intéresse ou si vous avez des questions, n'hésitez pas à me contacter sur Linkedin ou par mail.</p>
-                    <p></p>
             </div>
 
             <div class="liens">
@@ -18,9 +14,6 @@
                 <a href="mailto:cyrilflorval@gmail.com"><font-awesome-icon icon="envelope" class="icon"/></a>
             </div>
         </div>
-
-
-
     </div>
 </template>
 
@@ -31,7 +24,6 @@ export default {
     name: "ContactSection"
 }
 </script>
-
 
 
 <style scoped lang="scss">
@@ -57,7 +49,6 @@ export default {
             font-size: $title-size;
             font-weight: bold;
             background-color: $color-primary;
-            // padding-bottom: 70px 
         } 
 
         .text {
@@ -72,7 +63,6 @@ export default {
 
         .liens {
             display: flex;
-            // gap: 80px;
             align-items: center;
             justify-content: space-around;
             width: 100%;

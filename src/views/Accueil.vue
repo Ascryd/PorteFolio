@@ -59,14 +59,6 @@ export default {
 
     isActive = computed(() => store.getters.isActive)
 
-    console.log(isActive.value);
-
-    // let isActive = computed(() => {
-    //   console.log('je suis là');
-    //   console.log(store.getters.isActive);
-    //   return store.getters.isActive
-    // })
-    
     return {isActive}
   }
 }
@@ -101,4 +93,5 @@ export default {
     gap: clamp(60px, 35vw, 350px);
   }
 }
+
 </style>

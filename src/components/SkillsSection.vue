@@ -14,7 +14,7 @@
                     <li>HTML 5</li>
                     <li>CSS 3</li>
                     <li>Sass</li>
-                    <li>Javescript</li>
+                    <li>Javascript</li>
                     <li>VueJs</li>
                 </ul>
             </div>
@@ -24,6 +24,7 @@
                 <ul>
                     <li>NodeJs</li>
                     <li>Npm</li>
+                    <li>Express</li>
                 </ul>
             </div>
 
@@ -36,11 +37,12 @@
             </div>
 
             <div class="list">
-                <h3>Technologies diverses</h3>
+                <h3>Autres technologies</h3>
                 <ul>
                     <li>Git</li>
                     <li>GitKraken</li>
                     <li>phpMyAdmin</li>
+                    <li>PostMan</li>
                 </ul>
             </div>
         </div>
@@ -105,7 +107,6 @@ export default {
                 }
             }
         }
-
     }
 }
 

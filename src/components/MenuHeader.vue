@@ -12,7 +12,6 @@
 
 <script>
 
-
 export default {
     name: "MenuHeader",
 
@@ -35,7 +34,6 @@ export default {
     position: absolute;
     right: 0;
     width: 100%;
-    // height: 250px;
     z-index: 1;
     box-shadow: rgba(70, 70, 70, 0.192) 1px 1px 15px;
     border-radius: 5px 0 0 5px;
@@ -44,27 +42,27 @@ export default {
         display: none;
     }
 
-     ul {
-         height: 200px;
-         margin: 45px 0 15px 0;
-         display: flex;
-         flex-direction: column;
-         gap: 30px;
-         text-align: center;
+    ul {
+        height: 200px;
+        margin: 45px 0 15px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
 
-         li {
+        li {
 
-             a {
-                 font-size: 1.2rem;
-                 color: white;
-                 transition: color 0.3s;
+            a {
+                font-size: 1.2rem;
+                color: white;
+                transition: color 0.3s;
 
-                 &:hover {
-                     color: $color-secondary;
-                 }
-             }
-         }
-     }
+                &:hover {
+                    color: $color-secondary;
+                }
+            }
+        }
+    }
 }
 
 </style>

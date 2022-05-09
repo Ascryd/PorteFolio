@@ -1,6 +1,6 @@
 <template lang="fr">
     <div id="projects" class="projects">
-        
+
         <div class="title">
            <div class="line"> </div>
             <h2>Projets</h2>
@@ -17,7 +17,6 @@
                         <a :href="slide.github"><font-awesome-icon :icon="['fab', 'github']" class="icon"/></a>
                         <a v-if="slide.link" :href="slide.link"><font-awesome-icon icon="link" class="icon"/></a>
                     </div>
-                    
 
                     <div class="description">
                         <ul class="langages">
@@ -32,12 +31,10 @@
                                 <p v-if="slide.descriptionPart2">{{ slide.descriptionPart2 }}</p>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </CarouselSlide>
         </CarouselGlobal>
-
     </div>
 </template>
 
@@ -59,6 +56,7 @@ export default {
 
     setup() {
 
+        // Données stockées ici pour n'avoir que du front, pour héberger la page sur GitHub-pages
         const carouselSlides = [
             {
                 _id: 1,
@@ -120,7 +118,7 @@ export default {
                 name: "Groupomania",
                 images: ['P7/desktop_home', 'P7/desktop_connect', 'P7/desktop_register', 'P7/desktop_modal', 'P7/mobile_register', 'P7/mobile_home'],
                 presentation: "Ce projet est le septième de la formation Développeur Web chez OpenClassrooms, il s’agit du projet final.",
-                descriptionPart1: "La consigne principale était de réaliser un réseau social d’entreprise, rien n’était fourni par l’organisme à part quelques spécifications techniques, comme avoir un forum ou l'on peut poster du texte et du contenu multimédia.",
+                descriptionPart1: "La consigne principale était de réaliser un réseau social d’entreprise, rien n’était fourni par l’organisme à part quelques spécifications techniques, comme avoir un forum où l'on peut poster du texte et du contenu multimédia.",
                 descriptionPart2: "J’ai donc réalisé un réseau social assez simple où l'on peut envoyer texte et images, créer ou supprimer un profil ou encore poster des commentaires sous les posts. Toutes les données étaient stockées dans une base de données MySql.",
                 langages: ['HTML', 'Sass', 'VueJs', 'NodeJs', 'MySql', 'phpMyAdmin'],
                 github: 'https://github.com/Ascryd/OC-Projet-7'
@@ -132,164 +130,158 @@ export default {
         const store = useStore()
 
         const openGallery = (images) => {
-            // console.log(images);
             store.dispatch('toggleModal', images)
         }
 
         return { carouselSlides, openGallery, isActive }
-    }
-    
+    }  
 }
 </script>
 
 
 
 <style scoped lang="scss">
-    .projects {
-        width: 100%;
 
-        .title {
-            @include title-format;
-            width: 85%;
+.projects {
+    width: 100%;
 
-            .line {
-                width: 30%;
-            }
+    .title {
+        @include title-format;
+        width: 85%;
+
+        .line {
+            width: 30%;
         }
+    }
 
-        .carousel {
-            margin: 35px auto 0 auto;
-            width: 900px;
-            min-height: 670px;
-            height: calc(1150px - 30vw);
-            // 820
-            position: relative;
+    .carousel {
+        margin: 35px auto 0 auto;
+        width: 900px;
+        min-height: 670px;
+        height: calc(1150px - 30vw);
+        position: relative;
+        @include carousel-middle {
+            width: 100%;
+        }
+        
+        .slide-info {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            height: 450px;
             @include carousel-middle {
                 width: 100%;
+                border: none;
             }
-            
-            .slide-info {
-                position: absolute;
+
+            img {
                 width: 100%;
-                top: 0;
-                left: 0;
-                height: 450px;
-                @include carousel-middle {
-                    width: 100%;
-                    border: none;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            .links {
+                position: relative;
+                bottom: 37px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+
+                p {
+                    cursor: pointer;
+                    padding: 8px;
+                    border-radius: 8px;
+                    background-color: rgba(0, 0, 0, 0.486);
+                    width: 110px;
+                    font-size: 14px;
+                    font-weight: bold;
                 }
 
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                }
-
-                .links {
-                    position: relative;
-                    bottom: 37px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 10px;
-                    // height: 20px;
-
-                    p {
-                        // margin: auto;
-                        cursor: pointer;
-                        padding: 8px;
+                a {
+                    .icon {
+                        font-size: 16.5px;
                         border-radius: 8px;
-                        background-color: rgba(0, 0, 0, 0.486);
-                        width: 110px;
-                        font-size: 14px;
-                        font-weight: bold;
-
-                    }
-
-                    a {
-                        
-                        .icon {
-                            font-size: 16.5px;
-                            border-radius: 8px;
-                            background-color: rgba(0, 0, 0, 0.548);
-                            padding: 8px;
-                            color: white;       
-                        }                        
-                    }
-
+                        background-color: rgba(0, 0, 0, 0.548);
+                        padding: 8px;
+                        color: white;       
+                    }                        
                 }
-                .description {
+            }
+
+            .description {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+
+                .langages {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 20px;
+                    margin: 50px 4px 0 4px;
+                    transition: margin 0.5s;
+
+                    li {
+                        background-color: $color-secondary;
+                        color: black;
+                        border-radius: 20px;
+                        padding: 0px 30px 0px 15px;
+                        position: relative;
+                        height: 23px;
+                        display: flex;
+                        align-items: center;
+
+                        &::after {
+                            content: "";
+                            background-color: $color-primary;
+                            width: 5px;
+                            height: 5px;
+                            border-radius: 50%;
+                            position: absolute;
+                            right: 12px;
+                            align-items: center;
+                        }
+                    }
+                }
+
+                .details {
+                    margin: 0 5px 0 5px;
+                    padding: 0 20px;
+                    height: auto;
                     display: flex;
                     flex-direction: column;
-                    gap: 40px;
-
-                    .langages {
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: center;
-                        gap: 20px;
-                        margin-top: 50px;
-                        transition: margin 0.5s;
-    
-                        li {
-                             background-color: $color-secondary;
-                             color: black;
-                             border-radius: 20px;
-                             padding: 0px 30px 0px 15px;
-                             position: relative;
-                             height: 23px;
-                             display: flex;
-                             align-items: center;
-    
-                             &::after {
-                                 content: "";
-                                 background-color: $color-primary;
-                                 width: 5px;
-                                 height: 5px;
-                                 border-radius: 50%;
-                                 position: absolute;
-                                 right: 12px;
-                                 align-items: center;
-                             }
-                        }
+                    justify-content: center;
+                    gap: 26px;
+                    border-right: $color-secondary-transparent 2px solid;
+                    border-left: $color-secondary-transparent 2px solid;
+                    transition: all 0.4s;
+                    &:hover {
+                        border-right: $color-secondary 2px solid;
+                        border-left: $color-secondary 2px solid;
                     }
-    
-                    .details {
-                        margin: 0 5px 0 5px;
-                        padding: 0 20px;
-                        height: auto;
+
+                    h4 {
+                        font-size: clamp(25px, 3vw, 28px);;
+                        font-weight: 600;
+                        color: rgb(255, 255, 255);
+                    }
+
+                    .text {
                         display: flex;
                         flex-direction: column;
-                        justify-content: center;
-                        gap: 26px;
-                        border-right: $color-secondary-transparent 2px solid;
-                        border-left: $color-secondary-transparent 2px solid;
-                        transition: all 0.4s;
-                        &:hover {
-                            border-right: $color-secondary 2px solid;
-                            border-left: $color-secondary 2px solid;
-                        }
-    
-                        h4 {
-                            font-size: clamp(25px, 3vw, 28px);;
-                            font-weight: 600;
-                            color: rgb(255, 255, 255);
-                        }
-    
-                        .text {
-                            display: flex;
-                            flex-direction: column;
-                            gap: 11px;
+                        gap: 11px;
 
-                            p {
-                                font-size: clamp(17px, 2vw, 19px);;
-                                
-                            }
+                        p {
+                            font-size: clamp(17px, 2vw, 19px);;
+                            
                         }
                     }
                 }
-
             }
         }
     }
+}
+
 </style>

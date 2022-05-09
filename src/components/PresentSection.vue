@@ -19,7 +19,7 @@ export default {
 <style lang="scss">
     
     .presentation {
-        margin-top: 250px;
+        margin-top: clamp(80px, 25vw, 250px);
         display: flex;
         flex-direction: column;
         gap: 5px;
@@ -39,7 +39,6 @@ export default {
             font-size: clamp(33px, 5vw, 65px);
             font-weight: 550;
             color: rgba(255, 255, 255, 0.74);
-            
         }
 
         p:nth-child(4) {
@@ -52,6 +51,6 @@ export default {
                 color: $color-secondary;
             }
         }
-
     }
+
 </style>
