@@ -9,9 +9,9 @@
             </div>
 
             <div class="liens">
-                <a href="https://github.com/Ascryd"><font-awesome-icon :icon="['fab', 'github']" class="icon"/></a>
-                <a href="https://www.linkedin.com/in/cyril-florval-480598228/"><font-awesome-icon :icon="['fab', 'linkedin']" class="icon"/></a>
-                <a href="mailto:cyrilflorval@gmail.com"><font-awesome-icon icon="envelope" class="icon"/></a>
+                <a aria-label="my github link" href="https://github.com/Ascryd"><font-awesome-icon :icon="['fab', 'github']" class="icon"/></a>
+                <a aria-label="my Linkedin link" href="https://www.linkedin.com/in/cyril-florval-480598228/"><font-awesome-icon :icon="['fab', 'linkedin']" class="icon"/></a>
+                <a aria-label="send me an email" href="mailto:cyrilflorval@gmail.com"><font-awesome-icon icon="envelope" class="icon"/></a>
             </div>
         </div>
     </div>

@@ -13,7 +13,7 @@
         </ul>
         
         <div class="menuToggle">
-          <input @click="menu = !menu" class="cross" type="checkbox">
+          <input aria-label="a button for close or open the header menu" @click="menu = !menu" class="cross" type="checkbox">
             <span></span>
             <span></span>
             <span></span>

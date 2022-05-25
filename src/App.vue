@@ -1,4 +1,4 @@
-<template>
+<template lang="fr">
   <router-view/>
 </template>
 

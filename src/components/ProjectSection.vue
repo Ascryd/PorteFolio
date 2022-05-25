@@ -8,14 +8,14 @@
         </div>
         
         <CarouselGlobal :class="isActive ? 'modaleMod' : 'carousel'" v-slot:projects="{ currentSlide }">
-            <CarouselSlide class="carouselSlide" v-for="(slide, index) in carouselSlides" :key='index'>
+            <CarouselSlide class="carouselSlide" v-for="(slide, index) in carouselSlides.slice().reverse()" :key='index'>
                 <div v-show="currentSlide === index + 1" class='slide-info'>
-                    <img :src="require(`../assets/projects_pics/${slide.images[0]}.png`)" alt="Illustration du projet">
+                    <img :src="require(`../assets/projects_pics/${slide.images[0]}.webp`)" alt="Illustration du projet">
 
                     <div class="links">
                         <p @click="openGallery(slide.images)">Plus d'images</p>  
-                        <a :href="slide.github"><font-awesome-icon :icon="['fab', 'github']" class="icon"/></a>
-                        <a v-if="slide.link" :href="slide.link"><font-awesome-icon icon="link" class="icon"/></a>
+                        <a aria-label="Github project link" :href="slide.github"><font-awesome-icon :icon="['fab', 'github']" class="icon"/></a>
+                        <a aria-label="link of the website" v-if="slide.link" :href="slide.link"><font-awesome-icon icon="link" class="icon"/></a>
                     </div>
 
                     <div class="description">
@@ -24,7 +24,7 @@
                         </ul>
 
                         <div class="details">
-                            <h4>{{ slide.name }}</h4>
+                            <h3>{{ slide.name }}</h3>
                             <div class="text">
                                 <p>{{ slide.presentation}}</p>
                                 <p>{{ slide.descriptionPart1 }}</p>
@@ -120,9 +120,21 @@ export default {
                 presentation: "Ce projet est le septième de la formation Développeur Web chez OpenClassrooms, il s’agit du projet final.",
                 descriptionPart1: "La consigne principale était de réaliser un réseau social d’entreprise, rien n’était fourni par l’organisme à part quelques spécifications techniques, comme avoir un forum où l'on peut poster du texte et du contenu multimédia.",
                 descriptionPart2: "J’ai donc réalisé un réseau social assez simple où l'on peut envoyer texte et images, créer ou supprimer un profil ou encore poster des commentaires sous les posts. Toutes les données étaient stockées dans une base de données MySql.",
-                langages: ['HTML', 'Sass', 'VueJs', 'NodeJs', 'MySql', 'phpMyAdmin'],
+                langages: ['HTML', 'Sass', 'VueJs', 'Axios', 'NodeJs', 'MySql', 'phpMyAdmin'],
                 github: 'https://github.com/Ascryd/OC-Projet-7'
             },
+
+            {
+                _id: 7,
+                name: "More Ghibli",
+                images: ['more_ghibli/desktop_list', 'more_ghibli/desktop_info', 'more_ghibli/desktop_characters', 'more_ghibli/mobile_list', 'more_ghibli/mobile_info', 'more_ghibli/mobile_locations'],
+                presentation: "Ce site web est un projet personnel répertoriant les informations sur les films des studios Ghibli.",
+                descriptionPart1: "L’objectif de ce projet était de travailler avec le framework VueJs et avec Axios pour confirmer mes compétences en termes d’appels API.",
+                descriptionPart2: "J’ai également lié VueJs et Sass car je trouve que ces deux technologies vont assez bien ensemble et forment un duo puissant en développement Web.",
+                langages: ['HTML', 'Sass', 'VueJs', 'Axios'],
+                github: 'https://github.com/Ascryd/more_ghibli',
+                link: 'https://ascryd.github.io/more_ghibli/'
+            }
         ]
 
         let isActive = ref(false)
@@ -262,7 +274,7 @@ export default {
                         border-left: $color-secondary 2px solid;
                     }
 
-                    h4 {
+                    h3 {
                         font-size: clamp(25px, 3vw, 28px);;
                         font-weight: 600;
                         color: rgb(255, 255, 255);

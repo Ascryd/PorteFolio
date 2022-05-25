@@ -16,6 +16,7 @@
                     <li>Sass</li>
                     <li>Javascript</li>
                     <li>VueJs</li>
+                    <li>Axios</li>
                 </ul>
             </div>
 
@@ -23,7 +24,6 @@
                 <h3>Back-end</h3>
                 <ul>
                     <li>NodeJs</li>
-                    <li>Npm</li>
                     <li>Express</li>
                 </ul>
             </div>
@@ -43,6 +43,7 @@
                     <li>GitKraken</li>
                     <li>phpMyAdmin</li>
                     <li>PostMan</li>
+                    <li>NPM</li>
                 </ul>
             </div>
         </div>

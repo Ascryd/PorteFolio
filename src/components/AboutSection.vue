@@ -22,7 +22,7 @@
             </div>
 
             <div class="photo">
-                <img src="../assets/photo.jpg" alt="Ma photo">
+                <img src="../assets/photo.webp" alt="Ma photo">
             </div>
         </div>
     </section>
@@ -81,7 +81,7 @@ export default {
 
         .photo {
             margin: 0 10px 0 10px;
-            max-width: 290px;
+            min-width: 290px;
 
             img {
                 width: 100%;
